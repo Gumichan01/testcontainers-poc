@@ -31,7 +31,7 @@
             <version>1.12.3</version>
             <scope>test</scope>
         </dependency>
-        <!-- If you want to use a specific container, you must take the packahge associated with the DBMS -->
+        <!-- If you want to use a specific container, you must take the package associated with the DBMS -->
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>mysql</artifactId>
@@ -62,13 +62,14 @@
             <version>1.7.29</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- JDBC + test container -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>2.1.8.RELEASE</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>com.avides.springboot.testcontainer</groupId>
             <artifactId>springboot-testcontainer-common</artifactId>
