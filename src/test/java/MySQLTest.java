@@ -16,7 +16,7 @@ public class MySQLTest {
     private static Logger logger = LoggerFactory.getLogger(MySQLTest.class);
     private static DataSource dataSource;
     @ClassRule
-    public static MySQLContainer mysql = new MySQLContainer("mysql:5.5.53");
+    public static MySQLContainer mysql = new MySQLContainer("mysql:8.0.18");
 
     @BeforeClass
     public static void init() throws InterruptedException {
@@ -40,10 +40,9 @@ public class MySQLTest {
     }
 
     @Test
-    public void foo() {
+    public void testTableCreation() {
         //use the database
         logger.info("OK");
         assertTrue(true);
-
     }
 }
