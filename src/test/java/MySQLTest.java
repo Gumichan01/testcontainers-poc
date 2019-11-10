@@ -23,6 +23,9 @@ public class MySQLTest {
         //You can also use the GenericContainer for arbitrary containers
         //But there are convenient classes for common databases.
         mysql.start();
+        logger.info("address - {}", mysql.getContainerIpAddress());
+        logger.info("user - {}", mysql.getUsername());
+        logger.info("password - {}", mysql.getPassword());
         dataSource = DataSourceBuilder.create()
                 .url(mysql.getContainerIpAddress())
                 .username(mysql.getUsername())
