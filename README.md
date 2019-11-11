@@ -25,7 +25,7 @@ mvn compile
 ## Test
 
 ```
-sudo docker run -it --rm -v /home/luxon/prive/gumichan01/containersdb:/home/luxon/prive/gumichan01/containersdb -w /home/luxon/prive/gumichan01/containersdb -v /var/run/docker.sock:/var/run/docker.sock maven:3 mvn test
+sudo docker run -it --rm -v $PWD:$PWD -w $PWD -v /var/run/docker.sock:/var/run/docker.sock maven:3 mvn test
 ```
 
 Since the database instances are dockerized, tests must be launched as `root` 
